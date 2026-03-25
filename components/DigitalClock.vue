@@ -5,8 +5,12 @@ const { currentTime, currentDate } = useCurrentTime();
 </script>
 
 <template>
-  <div class="px-6 py-4 text-h6">
+  <div class="px-3 py-4 text-h5 text-yellow">
     <!-- <p>{{ date }} {{ time }}</p> -->
-    <p>{{ currentDate }} {{ currentTime }}</p>
+    <p>{{ currentDate }}</p>
+  </div>
+  <div class="px-6 py-4 text-h5 text-yellow">
+    <!-- <p>{{ date }} {{ time }}</p> -->
+    <p>{{ currentTime }}</p>
   </div>
 </template>

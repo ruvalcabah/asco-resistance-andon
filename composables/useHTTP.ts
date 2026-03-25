@@ -3,10 +3,10 @@ import { emptyHttpWO, woHttpData } from '@/common/workOrderMocks';
 export const useHTTP = async () => {
   const config = useRuntimeConfig();
 
-  const serverURL: string =
-    config.public.nodeEnv == 'production'
-      ? `http://${config.public.serverName}:1880`
-      : 'http://localhost:1880';
+  const serverURL: string = 'http://localhost:1880';
+  // config.public.nodeEnv == 'production'
+  //   ? `http://${config.public.serverName}:1880`
+  //   : 'http://localhost:1880';
 
   async function fetchData() {
     // Private Declarations
@@ -18,7 +18,7 @@ export const useHTTP = async () => {
     try {
       // console.log('Getting Fetch Info');
       data = await fetch(endpoint).then((res) => res.json());
-      // console.log(data);
+      console.log(data);
     } catch (error) {
       console.log('Error Fetching data ', error);
     }

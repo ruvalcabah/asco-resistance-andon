@@ -11,8 +11,7 @@ const props = withDefaults(defineProps<Props>(), {
 </script>
 
 <template>
-  <v-card-title
-    class="bg-grey-lighten-2 text-body-2  text-grey-darken-4 px-4 py-1 font-weight-bold d-flex align-center">
+  <v-card-title class="bg-grey-lighten-2 text-body-2 text-grey-darken-4 px-4 py-1 font-weight-bold d-flex align-center">
     <v-icon :icon="icon" class="mr-2" />
     <span class="pt-1">
       {{ props.title }}

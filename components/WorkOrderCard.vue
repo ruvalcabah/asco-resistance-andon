@@ -15,19 +15,24 @@ const props = withDefaults(defineProps<Props>(), {
 </script>
 
 <template>
-  <v-card class="rounded-sm" height="84vh">
+  <v-card class="rounded-sm bg-grey-lighten-4" height="84vh">
     <CardTitle icon="mdi-database-search" title="Order Information" />
     <v-card-text class="px-8 py-6">
       <div class="fill-height">
         <RowCard keyItem="workOrder" field="Work Order" :content="props.data.workOrder" />
         <RowCard keyItem="itemNumber" field="Item Number" :content="props.data.itemNumber" />
         <RowCard keyItem="image" field="Image" :content="props.data.image" />
-        <RowCard keyItem="qty" field="Quantity" :content="`${props.data.qty}`"
+        <RowCard keyItem="qty" field="Order Quantity" :content="`${props.data.qty}`"
           :highlight="(props.currentStep >= 9 && props.currentStep <= 10) ? true : false" />
-        <RowCard keyItem="unitWeightLb" field="Unit Weight (Lb)"
-          :content="`${props.data.unitWeightLb.toFixed(3)} lb`" />
-        <RowCard keyItem="weightRange" field="Weight Range (Lb)"
-          :content="`${props.data.unitLowerLimitLb.toFixed(3)} - ${props.data.unitUpperLimitLb.toFixed(3)} gr`" />
+        <RowCard keyItem="resistance" field="Resistance (ohm)"
+          :content="`${props.data.resistance.toLocaleString()} Ω`" />
+        <RowCard keyItem="resistanceRange" field="Resistance Range"
+          :content="`${props.data.resLower.toLocaleString()} - ${props.data.resUpper.toLocaleString()} Ω`" />
+        <RowCard keyItem="turns" field="Turns Count" :content="`${props.data.turns.toLocaleString()}`" />
+        <RowCard keyItem="turnsRange" field="Turns Range"
+          :content="`${props.data.turnsLower.toLocaleString()} - ${props.data.turnsUpper.toLocaleString()}`" />
+        <!-- <RowCard keyItem="weightRange" field="Weight Range (Lb)"
+          :content="`${props.data.unitLowerLimitLb.toFixed(3)} - ${props.data.unitUpperLimitLb.toFixed(3)} lb`" /> -->
       </div>
     </v-card-text>
   </v-card>

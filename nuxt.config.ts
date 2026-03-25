@@ -4,7 +4,7 @@ export default defineNuxtConfig({
   // app template
   app: {
     head: {
-      title: 'Asco Packaging App',
+      title: 'Asco Resistance ANDON App',
       htmlAttrs: {
         lang: 'en'
       },

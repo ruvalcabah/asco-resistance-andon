@@ -1,4 +1,5 @@
-version: '3'
+# version: "3"
+name: asco-resistance-andon
 services:
   nuxt-app:
     build:
@@ -8,7 +9,7 @@ services:
     env_file:
       - .env # USE ENVIRONMENTAL VARIABLES FILE FOR NUXT APP
     ports:
-      - '3000:3000' # FRONT-END PORT
+      - "3000:3000" # FRONT-END PORT
     restart: unless-stopped
   node-red:
     build:
@@ -17,34 +18,10 @@ services:
     depends_on:
       - nuxt-app
     container_name: node-red
-    # Network Host Resolver
-    # network_mode: host // NO FUNCIONO
-    dns:
-      - 10.16.64.15 # DNS OF MY INTRANET ADAPTER
-      - 10.37.16.11 # SECONDARY DNS OF MY INTRANET ADAPTER
-      # - 10.216.146.1 # Default Gateway
-    extra_hosts:
-      - 'na-flo-sql-03:10.216.208.64'
     ports:
-      - '53:53' # DNS PORT?
-      # - '53:53/tcp' # DNS PORT?
-      # - '53:53/udp' # DNS PORT?
-      - '1433:1433' # MSSQL PORT
-      - '1880:1880' # BACKEND PORT
-      - '5100:5100' # HANDHELD SCANNER PORT
-      - '5200:5200' # FIXED SCANNER PORT
-      - '5300:5300' # WEIGHT SCALE PORT
+      - "53:53" # DNS PORT?
+      - "1433:1433" # MSSQL PORT
+      - "1880:1880" # BACKEND PORT
+      - "5100:5100" # HANDHELD SCANNER PORT
+      - "5200:5200" # HIOKI RESISTANCE METER PORT
     restart: unless-stopped
-  # jsreport:
-  #   build:
-  #     context: .
-  #     dockerfile: ./services/jsreport/Dockerfile
-  #   depends_on:
-  #     - nuxt-app
-  #     - node-red
-  #   container_name: jsreport
-  #   # env_file:
-  #   #   - .env # USE ENVIRONMENTAL VARIABLES FILE FOR NUXT APP
-  #   ports:
-  #     - '5488:5488' # SERVER PORT
-  #   restart: unless-stopped

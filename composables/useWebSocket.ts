@@ -4,18 +4,18 @@ export const useWebSocket = () => {
   // Global Private Declarations
   const config = useRuntimeConfig();
 
-  const serverURL: string =
-    config.public.nodeEnv == 'production'
-      ? `ws://${config.public.serverName}:1880`
-      : 'ws://localhost:1880';
+  const serverURL: string = 'ws://localhost:1880';
+  // config.public.nodeEnv == 'production'
+  //   ? `ws://${config.public.serverName}:1880`
+  //   : 'ws://localhost:1880';
 
   const endpooint: string = serverURL + '/connection';
   let reconnectInterval: number = 1000; // Start with a 1s delay
   let socket: WebSocket;
 
-  const socketData = ref<{ state: string; weight: number }>({
-    state: 'IDLE',
-    weight: 0.0
+  const socketData = ref<{ state: string; measuredResistance: number }>({
+    state: 'IDLE_SCAN_ORDER',
+    measuredResistance: 0.0
   });
 
   const establishConnection = () => {
@@ -31,8 +31,8 @@ export const useWebSocket = () => {
         console.log(
           'State: ',
           socketData.value.state,
-          ' Weight: ',
-          socketData.value.weight,
+          ' Resistance: ',
+          socketData.value.measuredResistance,
           'Server: ',
           config.public.serverName
         );

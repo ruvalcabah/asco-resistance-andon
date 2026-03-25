@@ -918,5 +918,109 @@
                 "file": "\\Users\\ruvalcabah\\.node-red\\node_modules\\node-red-contrib-socketio\\socketio.js"
             }
         }
+    },
+    "@tulip/node-red-tulip-api": {
+        "name": "@tulip/node-red-tulip-api",
+        "version": "0.3.1",
+        "local": true,
+        "user": true,
+        "nodes": {
+            "tulipMachineAttribute": {
+                "name": "tulipMachineAttribute",
+                "types": [
+                    "tulip-machine-attribute"
+                ],
+                "enabled": true,
+                "local": true,
+                "user": false,
+                "module": "@tulip/node-red-tulip-api",
+                "file": "\\Users\\ruvalcabah\\.node-red\\node_modules\\@tulip\\node-red-tulip-api\\tulip_machine_attribute.js"
+            },
+            "tulipTables": {
+                "name": "tulipTables",
+                "types": [
+                    "tulip-tables"
+                ],
+                "enabled": true,
+                "local": true,
+                "user": false,
+                "module": "@tulip/node-red-tulip-api",
+                "file": "\\Users\\ruvalcabah\\.node-red\\node_modules\\@tulip\\node-red-tulip-api\\tulip_tables.js"
+            },
+            "tulipApiAuth": {
+                "name": "tulipApiAuth",
+                "types": [
+                    "tulip-api-auth"
+                ],
+                "enabled": true,
+                "local": true,
+                "user": false,
+                "module": "@tulip/node-red-tulip-api",
+                "file": "\\Users\\ruvalcabah\\.node-red\\node_modules\\@tulip\\node-red-tulip-api\\tulip_api_auth.js"
+            }
+        }
+    },
+    "@ais_automation/node-red-contrib-odbc": {
+        "name": "@ais_automation/node-red-contrib-odbc",
+        "version": "2.0.0",
+        "local": true,
+        "user": true,
+        "nodes": {
+            "odbc": {
+                "name": "odbc",
+                "types": [
+                    "ODBC_CONNECTION",
+                    "ODBC"
+                ],
+                "enabled": true,
+                "local": true,
+                "user": false,
+                "module": "@ais_automation/node-red-contrib-odbc",
+                "file": "\\Users\\ruvalcabah\\.node-red\\node_modules\\@ais_automation\\node-red-contrib-odbc\\odbc.js"
+            }
+        }
+    },
+    "node-red-contrib-sharepoint": {
+        "name": "node-red-contrib-sharepoint",
+        "version": "1.0.3",
+        "local": true,
+        "user": true,
+        "nodes": {
+            "node-red-contrib-sharepoint": {
+                "name": "node-red-contrib-sharepoint",
+                "types": [
+                    "nodeRedSharepoint-access",
+                    "nodeRedSharepoint"
+                ],
+                "enabled": true,
+                "local": true,
+                "user": false,
+                "module": "node-red-contrib-sharepoint",
+                "file": "\\Users\\ruvalcabah\\.node-red\\node_modules\\node-red-contrib-sharepoint\\sharepoint.js"
+            }
+        }
+    },
+    "node-red-contrib-ignition-nodes": {
+        "name": "node-red-contrib-ignition-nodes",
+        "version": "2.0.1",
+        "local": false,
+        "user": false,
+        "nodes": {
+            "ignition-nodes": {
+                "name": "ignition-nodes",
+                "types": [
+                    "ignition-tag-read",
+                    "ignition-tag-write",
+                    "ignition-tag-read-ws",
+                    "ignition-tag-browse",
+                    "ignition-server"
+                ],
+                "enabled": true,
+                "local": false,
+                "user": false,
+                "module": "node-red-contrib-ignition-nodes",
+                "file": "C:\\Users\\ruvalcabah\\AppData\\Roaming\\npm\\node_modules\\node-red-contrib-ignition-nodes\\ignition-nodes.js"
+            }
+        }
     }
 }

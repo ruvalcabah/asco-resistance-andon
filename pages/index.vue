@@ -12,6 +12,7 @@ const { fetchData } = await useHTTP()
 
 // Component Initialization
 onMounted(() => {
+  // console.log('Hola Mundo')
   establishConnection();
 });
 
@@ -19,7 +20,7 @@ onMounted(() => {
 const stepData = ref<number>(0)
 
 const measureData = computed<number>(() => {
-  return socketData.value.weight || 0
+  return socketData.value.measuredResistance || 0
 })
 
 const fieldData = ref<woHttpData>(emptyHttpWO) //  emptyHttpWO/dummyHttpWO
@@ -53,7 +54,7 @@ watch(
 </script>
 
 <template>
-  <v-row>
+  <v-row class="justify-center">
     <v-col cols="4">
       <WorkOrderCard :data="fieldData" :currentStep="stepData" />
     </v-col>
@@ -69,8 +70,8 @@ watch(
         </v-col>
         <v-col cols="12">
           <!-- <MeasureWeightCard /> -->
-          <WeightCard :measure="measureData" :lowerLimit="fieldData.unitLowerLimitLb"
-            :upperLimit="fieldData.unitUpperLimitLb" />
+          <MeasureCard :measure="measureData" :lowerLimit="fieldData.resLower" :upperLimit="fieldData.resUpper"
+            :currentStep="stepData" :shortText="fieldData.shortText" />
           <!-- -->
           <!-- :lowerLimit="0" :upperLimit="10" /> -->
         </v-col>

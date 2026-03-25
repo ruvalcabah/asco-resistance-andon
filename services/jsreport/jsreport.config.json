@@ -1,6 +1,0 @@
-{
-  "trustUserCode": true,
-  "store": {
-    "provider": "fs"
-  }
-}

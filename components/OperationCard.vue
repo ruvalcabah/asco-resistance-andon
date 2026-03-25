@@ -42,9 +42,10 @@ const displaySteps = computed<{ state: string, caption: string }[]>(() => { //: 
     <v-card-text class="px-8 py-8">
       <div class="fill-height">
         <v-row align="center">
-          <v-col :cols="displaySteps.length > 6 ? (step.caption.length > 14 && '2') : ''" v-for="step in displaySteps">
+          <v-col class="px-4" cols="displaySteps.length > 6 ? (step.caption.length > 14 && '2') : ''"
+            v-for="step in displaySteps">
             <!-- <v-col v-for="step in displaySteps"> -->
-            <v-card class="text-center font-weight-bold px-3 py-3" :class="step.state">
+            <v-card class="text-center font-weight-bold px-3 py-5" :class="step.state">
               <span>{{ step.caption }}</span>
             </v-card>
           </v-col>

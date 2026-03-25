@@ -24,7 +24,7 @@ const props = withDefaults(defineProps<Props>(), {
             {{ props.field }}:
           </v-col>
           <v-col cols="7" align-self="center" class="px-1 py-3 text-left text-h6" v-if="props.keyItem != 'image'">
-            <span class="px-1 py-1" :class="props.highlight && 'bg-red-accent-3'">
+            <span class="px-1 py-1 text-red-darken-4" :class="props.highlight && 'bg-red-accent-3'">
               {{ props.content }}
             </span>
           </v-col>
