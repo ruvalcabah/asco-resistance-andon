@@ -11,7 +11,7 @@ export default defineNuxtConfig({
       charset: 'utf-8',
       viewport: 'width=device-width, initial-scale=1',
       meta: [
-        { hid: 'description', name: 'description', content: '' },
+        // { hid: 'description', name: 'description', content: '' },
         { name: 'format-detection', content: 'telephone=no' }
       ]
     }
@@ -27,6 +27,7 @@ export default defineNuxtConfig({
   vuetify: {
     moduleOptions: {
       /* module specific options */
+      styles: { configFile: 'public/assets/variables.scss' }
     },
     vuetifyOptions: {
       /* vuetify options */
@@ -36,4 +37,5 @@ export default defineNuxtConfig({
   typescript: {
     strict: false
   }
+  // css: ['@/public/assets/variables.scss']
 });

@@ -1,5 +1,6 @@
 <script setup lang="ts">
-import { emptyHttpWO, dummyHttpWO, woHttpData } from "@/common/workOrderMocks";
+import { emptyHttpWO, dummyHttpWO } from "@/common/workOrderMocks";
+import type { woHttpData } from "@/common/workOrderMocks";
 import { operationSteps } from "@/common/operationMocks";
 import { useWebSocket } from "@/composables/useWebSocket";
 import { useHTTP } from "@/composables/useHTTP";
@@ -54,7 +55,7 @@ watch(
 </script>
 
 <template>
-  <v-row class="justify-center">
+  <v-row class="justify-center px-4">
     <v-col cols="4">
       <WorkOrderCard :data="fieldData" :currentStep="stepData" />
     </v-col>

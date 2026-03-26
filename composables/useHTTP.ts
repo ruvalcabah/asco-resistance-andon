@@ -1,4 +1,5 @@
-import { emptyHttpWO, woHttpData } from '@/common/workOrderMocks';
+import { emptyHttpWO } from '@/common/workOrderMocks';
+import type { woHttpData } from '@/common/workOrderMocks';
 
 export const useHTTP = async () => {
   const config = useRuntimeConfig();

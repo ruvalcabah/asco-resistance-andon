@@ -18,3 +18,8 @@ const props = withDefaults(defineProps<Props>(), {
     </span>
   </v-card-title>
 </template>
+<style scoped lang="scss">
+.v-card-title {
+  font-size: 0.875rem;
+}
+</style>

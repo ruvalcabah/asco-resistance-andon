@@ -19,7 +19,7 @@ const workOrder = ref<string>('Empty')
 const emit = defineEmits(['orderUpdate']);
 
 onBeforeUpdate(() => {
-  if (props.keyItem = 'workOrder') {
+  if (props.keyItem == 'workOrder') {
     workOrder.value = props.content
   }
 })
@@ -36,11 +36,11 @@ const onEnter = () => {
 </script>
 
 <template>
-  <v-row class="mb-6" no-gutters>
+  <v-row class="mb-4" no-gutters>
     <v-col align-self="center">
       <v-card>
         <!-- </v-card>class="mx-0 mb-6"> -->
-        <v-row class="py-2 px-2" align="center">
+        <v-row class="py-1 px-2" align="center">
           <v-col cols="5" class="px-2 py-4 text-right text-h6 font-weight-bold">
             {{ props.field }}:
           </v-col>
@@ -52,3 +52,8 @@ const onEnter = () => {
     </v-col>
   </v-row>
 </template>
+<style scoped lang="scss">
+.v-col {
+  font-size: 1.15rem;
+}
+</style>

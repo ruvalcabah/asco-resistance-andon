@@ -28,8 +28,9 @@ npm ERR! code ELIFECYCLE
 
 # Solution
 - Step 1: npm cache clean --force
-- Step 2: rm package-lock.json
-- Step 3: npm install
+- Step 2: rmdir node_modules
+- Step 3: rm package-lock.json
+- Step 4: npm install
 ```
 
 ## Development Server

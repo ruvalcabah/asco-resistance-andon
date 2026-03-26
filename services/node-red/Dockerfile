@@ -1,5 +1,5 @@
 # Use the official Node.js 18 image as the base image
-FROM node:18
+FROM node:22-alpine
 # Install Node-RED and create .node-red folder at root
 RUN npm install -g --unsafe-perm node-red
 

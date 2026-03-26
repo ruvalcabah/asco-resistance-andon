@@ -1,5 +1,6 @@
 <script setup lang="ts">
-import { emptyHttpWO, woHttpData, } from "@/common/workOrderMocks";
+import { emptyHttpWO } from "@/common/workOrderMocks";
+import type { woHttpData, } from "@/common/workOrderMocks";
 
 import { useHTTP } from "@/composables/useHTTP";
 // Fetch Composable
@@ -26,7 +27,7 @@ const orderUpdate = (eventPayload) => {
 <template>
   <v-card class="rounded-sm bg-grey-lighten-4" height="84vh">
     <CardTitle icon="mdi-database-search" title="Order Information" />
-    <v-card-text class="px-8 py-6">
+    <v-card-text class="px-8 py-3">
       <div class="fill-height">
         <RowCardWO keyItem="workOrder" field="Work Order" :content="props.data.workOrder" @orderUpdate="orderUpdate" />
         <RowCard keyItem="itemNumber" field="Item Number" :content="props.data.itemNumber" />
