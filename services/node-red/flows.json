@@ -51,7 +51,7 @@
         "id": "97697978194003a8",
         "type": "tab",
         "label": "Scale",
-        "disabled": false,
+        "disabled": true,
         "info": "",
         "env": []
     },
@@ -59,7 +59,7 @@
         "id": "55fc6b03b0b32867",
         "type": "tab",
         "label": "Fixed Scanner",
-        "disabled": false,
+        "disabled": true,
         "info": "",
         "env": []
     },
@@ -75,7 +75,7 @@
         "id": "15da4eb813116d70",
         "type": "tab",
         "label": "Update Workflows",
-        "disabled": false,
+        "disabled": true,
         "info": "",
         "env": []
     },
@@ -83,7 +83,7 @@
         "id": "fb4ef91288848134",
         "type": "tab",
         "label": "Tulip",
-        "disabled": false,
+        "disabled": true,
         "info": "",
         "env": []
     },
@@ -91,7 +91,7 @@
         "id": "685c7011d2a8b9cd",
         "type": "tab",
         "label": "Alphanumeric Counter",
-        "disabled": false,
+        "disabled": true,
         "info": "",
         "env": []
     },
@@ -265,7 +265,7 @@
             "04d833f94a618869"
         ],
         "x": 34,
-        "y": 319,
+        "y": 339,
         "w": 452,
         "h": 122
     },
@@ -288,12 +288,16 @@
             "8c8d35ba5e882fc1",
             "ced60c4a4a5bb6be",
             "dd989d1484701cdf",
-            "32ef1524dc73ddd3"
+            "32ef1524dc73ddd3",
+            "2f210c31e54b8cc7",
+            "a6529a86e6ba89af",
+            "744f8e96e9bfab5b",
+            "a65c5a0a1257689d"
         ],
         "x": 34,
         "y": 159,
         "w": 812,
-        "h": 122
+        "h": 162
     },
     {
         "id": "bd57d1a5b2fc80df",
@@ -899,7 +903,8 @@
         "z": "4a57246270356963",
         "name": "reset",
         "links": [
-            "8c8d35ba5e882fc1"
+            "8c8d35ba5e882fc1",
+            "3492505a9a1bc70a"
         ],
         "x": 190,
         "y": 380,
@@ -2168,6 +2173,7 @@
         "id": "41a5010ee6efd5d6",
         "type": "serial in",
         "z": "66a6791f58f0b8fc",
+        "d": true,
         "name": "Scan Order",
         "serial": "a0bd490a6ed8ddfa",
         "x": 90,
@@ -2177,6 +2183,23 @@
                 "5f6bbbb23df2270f"
             ]
         ]
+    },
+    {
+        "id": "6a2b0ae5c96f5d9d",
+        "type": "link in",
+        "z": "66a6791f58f0b8fc",
+        "name": "UI Work Order",
+        "links": [
+            "a65c5a0a1257689d"
+        ],
+        "x": 90,
+        "y": 360,
+        "wires": [
+            [
+                "5f6bbbb23df2270f"
+            ]
+        ],
+        "l": true
     },
     {
         "id": "fb71edead8a91f7a",
@@ -3174,7 +3197,7 @@
         "server": "a8ab2332f56c0c2b",
         "client": "",
         "x": 380,
-        "y": 400,
+        "y": 420,
         "wires": []
     },
     {
@@ -3196,7 +3219,7 @@
         "payload": "",
         "payloadType": "date",
         "x": 150,
-        "y": 400,
+        "y": 420,
         "wires": [
             [
                 "eb501f5539571692"
@@ -3218,7 +3241,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 335,
-        "y": 360,
+        "y": 380,
         "wires": [],
         "l": false
     },
@@ -3236,7 +3259,7 @@
         "finalize": "",
         "libs": [],
         "x": 255,
-        "y": 400,
+        "y": 420,
         "wires": [
             [
                 "abc11bb2d298f1cf",
@@ -3254,7 +3277,7 @@
         "server": "a8ab2332f56c0c2b",
         "client": "",
         "x": 140,
-        "y": 360,
+        "y": 380,
         "wires": [
             [
                 "04d833f94a618869"
@@ -3276,7 +3299,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 255,
-        "y": 360,
+        "y": 380,
         "wires": [],
         "l": false
     },
@@ -3286,17 +3309,18 @@
         "z": "568145b628f39635",
         "g": "9b158a443107e4f8",
         "name": "",
-        "url": "/ui-api",
+        "url": "/command",
         "method": "post",
         "upload": false,
         "swaggerDoc": "",
-        "x": 130,
+        "x": 140,
         "y": 240,
         "wires": [
             [
                 "4306e5d24eaa5355",
                 "728341a792333e1a",
-                "4be6eb3049c2dc49"
+                "4be6eb3049c2dc49",
+                "a6529a86e6ba89af"
             ]
         ]
     },
@@ -3317,8 +3341,8 @@
         "y": 240,
         "wires": [
             [
-                "728341a792333e1a",
-                "2db8254f14fc01ea"
+                "2db8254f14fc01ea",
+                "2f210c31e54b8cc7"
             ]
         ],
         "l": false
@@ -3331,7 +3355,7 @@
         "name": "",
         "statusCode": "",
         "headers": {},
-        "x": 390,
+        "x": 450,
         "y": 240,
         "wires": []
     },
@@ -3349,7 +3373,7 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 355,
+        "x": 255,
         "y": 200,
         "wires": [],
         "l": false
@@ -3555,6 +3579,81 @@
                 "89ea6dcc8b99126d"
             ]
         ]
+    },
+    {
+        "id": "2f210c31e54b8cc7",
+        "type": "debug",
+        "z": "568145b628f39635",
+        "g": "9b158a443107e4f8",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 345,
+        "y": 200,
+        "wires": [],
+        "l": false
+    },
+    {
+        "id": "a6529a86e6ba89af",
+        "type": "function",
+        "z": "568145b628f39635",
+        "g": "9b158a443107e4f8",
+        "name": "",
+        "func": "msg = {\n  payload: msg.payload.payload,\n  topic:'scanOrder'\n}\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 285,
+        "y": 280,
+        "wires": [
+            [
+                "744f8e96e9bfab5b",
+                "a65c5a0a1257689d"
+            ]
+        ],
+        "l": false
+    },
+    {
+        "id": "744f8e96e9bfab5b",
+        "type": "debug",
+        "z": "568145b628f39635",
+        "g": "9b158a443107e4f8",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 345,
+        "y": 260,
+        "wires": [],
+        "l": false
+    },
+    {
+        "id": "a65c5a0a1257689d",
+        "type": "link out",
+        "z": "568145b628f39635",
+        "g": "9b158a443107e4f8",
+        "name": "UI Work Order",
+        "mode": "link",
+        "links": [
+            "6a2b0ae5c96f5d9d"
+        ],
+        "x": 425,
+        "y": 280,
+        "wires": []
     },
     {
         "id": "70d24837.fa7bb8",

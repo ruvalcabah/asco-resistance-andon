@@ -1,6 +1,10 @@
 <script setup lang="ts">
 import { emptyHttpWO, woHttpData, } from "@/common/workOrderMocks";
 
+import { useHTTP } from "@/composables/useHTTP";
+// Fetch Composable
+const { fetchPost } = await useHTTP()
+
 export interface Props {
   data: woHttpData
   currentStep: number
@@ -12,6 +16,11 @@ const props = withDefaults(defineProps<Props>(), {
   },
   currentStep: 0
 })
+
+const orderUpdate = (eventPayload) => {
+  // props.data.workOrder = eventPayload.workOrder
+  const res = fetchPost({ payload: eventPayload.workOrder })
+}
 </script>
 
 <template>
@@ -19,7 +28,7 @@ const props = withDefaults(defineProps<Props>(), {
     <CardTitle icon="mdi-database-search" title="Order Information" />
     <v-card-text class="px-8 py-6">
       <div class="fill-height">
-        <RowCard keyItem="workOrder" field="Work Order" :content="props.data.workOrder" />
+        <RowCard keyItem="workOrder" field="Work Order" :content="props.data.workOrder" @orderUpdate="orderUpdate" />
         <RowCard keyItem="itemNumber" field="Item Number" :content="props.data.itemNumber" />
         <RowCard keyItem="image" field="Image" :content="props.data.image" />
         <RowCard keyItem="qty" field="Order Quantity" :content="`${props.data.qty}`"
