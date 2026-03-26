@@ -44,19 +44,9 @@ const onEnter = () => {
           <v-col cols="5" class="px-2 py-4 text-right text-h6 font-weight-bold">
             {{ props.field }}:
           </v-col>
-          <!-- <v-col cols="7" align-self="center" class="px-1 py-3 text-left text-h6" v-if="props.keyItem == 'workOrder'">
-            <v-text-field class="px-1 py-1 text-blue-darken-4 font-weight-bold" hide-details v-model="workOrder"
-              @change="orderChange" @focus="$event.target.select()">
-            </v-text-field>
-          </v-col> -->
-          <v-col cols="7" align-self="center" class="px-1 py-3 text-left text-h6">
-            <span class="px-1 py-1 text-red-darken-4" :class="props.highlight && 'bg-red-accent-3'">
-              {{ props.content }}
-            </span>
-          </v-col>
-          <!-- <v-col class="px-1" align="center" v-if="props.keyItem == 'image'">
+          <v-col class="px-1" align="center">
             <v-img height="150" max-width="300" contain :src="`/img/${props.content}`" />
-          </v-col> -->
+          </v-col>
         </v-row>
       </v-card>
     </v-col>

@@ -30,7 +30,7 @@ const orderUpdate = (eventPayload) => {
       <div class="fill-height">
         <RowCardWO keyItem="workOrder" field="Work Order" :content="props.data.workOrder" @orderUpdate="orderUpdate" />
         <RowCard keyItem="itemNumber" field="Item Number" :content="props.data.itemNumber" />
-        <RowCard keyItem="image" field="Image" :content="props.data.image" />
+        <RowCardImg keyItem="image" field="Image" :content="props.data.image" />
         <RowCard keyItem="qty" field="Order Quantity" :content="`${props.data.qty}`"
           :highlight="(props.currentStep >= 9 && props.currentStep <= 10) ? true : false" />
         <RowCard keyItem="resistance" field="Resistance (ohm)"
