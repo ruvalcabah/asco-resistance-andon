@@ -674,7 +674,6 @@
         "z": "4a57246270356963",
         "name": "scanOrder",
         "links": [
-            "d780feaa9af3f722",
             "ea4ee922573ce4a3"
         ],
         "x": 180,
@@ -903,8 +902,7 @@
         "z": "4a57246270356963",
         "name": "reset",
         "links": [
-            "8c8d35ba5e882fc1",
-            "3492505a9a1bc70a"
+            "8c8d35ba5e882fc1"
         ],
         "x": 190,
         "y": 380,
@@ -921,8 +919,7 @@
         "z": "4a57246270356963",
         "name": "partDiscounted",
         "links": [
-            "7f5df402f8fd0fa5",
-            "790ff26109b3ed72"
+            "7f5df402f8fd0fa5"
         ],
         "x": 160,
         "y": 300,
@@ -2150,6 +2147,7 @@
         "id": "239a8f090105d5c5",
         "type": "tcp in",
         "z": "66a6791f58f0b8fc",
+        "d": true,
         "name": "Scan Order",
         "server": "server",
         "host": "localhost",
@@ -2863,7 +2861,7 @@
         "z": "cfe04191dcadd430",
         "name": "",
         "pauseType": "delay",
-        "timeout": "2",
+        "timeout": "1",
         "timeoutUnits": "seconds",
         "rate": "1",
         "nbRateUnits": "2",
@@ -3925,8 +3923,7 @@
         "z": "d70bf02cfcae28ed",
         "name": "scanOrder",
         "links": [
-            "300720bac06a9ceb",
-            "d780feaa9af3f722"
+            "300720bac06a9ceb"
         ],
         "x": 160,
         "y": 100,
@@ -4155,8 +4152,7 @@
         "z": "d70bf02cfcae28ed",
         "name": "scanOrderOK",
         "links": [
-            "aec6509c0d9523ff",
-            "e1656e2b16fe43b1"
+            "aec6509c0d9523ff"
         ],
         "x": 150,
         "y": 140,
@@ -4199,8 +4195,7 @@
         "z": "d70bf02cfcae28ed",
         "name": "reset",
         "links": [
-            "0b6b01c3d37ce325",
-            "2b7168255cd081ad"
+            "0b6b01c3d37ce325"
         ],
         "x": 170,
         "y": 500,
@@ -4217,8 +4212,7 @@
         "z": "d70bf02cfcae28ed",
         "name": "partDiscounted",
         "links": [
-            "1524bf724ed56902",
-            "790ff26109b3ed72"
+            "1524bf724ed56902"
         ],
         "x": 140,
         "y": 340,
@@ -5944,9 +5938,7 @@
         "z": "97697978194003a8",
         "name": "scaleMeasure",
         "mode": "link",
-        "links": [
-            "96d6baf3112756ca"
-        ],
+        "links": [],
         "x": 460,
         "y": 200,
         "wires": [],
@@ -6409,8 +6401,7 @@
         "name": "scanPart",
         "mode": "link",
         "links": [
-            "198fdd8f996b7484",
-            "57144e869b380c2e"
+            "198fdd8f996b7484"
         ],
         "x": 680,
         "y": 160,

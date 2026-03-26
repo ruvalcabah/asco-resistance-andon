@@ -3,7 +3,7 @@
 # -----------------------
 # Build stage
 # -----------------------
-ARG NODE_VERSION=18.14.2
+ARG NODE_VERSION=22
 FROM node:${NODE_VERSION}-slim as build
 
 WORKDIR /app
