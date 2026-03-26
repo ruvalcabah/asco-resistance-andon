@@ -28,7 +28,7 @@ const orderUpdate = (eventPayload) => {
     <CardTitle icon="mdi-database-search" title="Order Information" />
     <v-card-text class="px-8 py-6">
       <div class="fill-height">
-        <RowCard keyItem="workOrder" field="Work Order" :content="props.data.workOrder" @orderUpdate="orderUpdate" />
+        <RowCardWO keyItem="workOrder" field="Work Order" :content="props.data.workOrder" @orderUpdate="orderUpdate" />
         <RowCard keyItem="itemNumber" field="Item Number" :content="props.data.itemNumber" />
         <RowCard keyItem="image" field="Image" :content="props.data.image" />
         <RowCard keyItem="qty" field="Order Quantity" :content="`${props.data.qty}`"

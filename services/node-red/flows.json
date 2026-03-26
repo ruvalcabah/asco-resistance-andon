@@ -326,7 +326,7 @@
         "type": "MSSQL-CN",
         "tdsVersion": "7_4",
         "name": "Global Data Warehouse",
-        "server": "FLMCPIS-P-001",
+        "server": "flmcpis-p-001.emrsn.org",
         "port": "1433",
         "encyption": false,
         "trustServerCertificate": false,
