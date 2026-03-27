@@ -26,6 +26,8 @@ const measureData = computed<number>(() => {
 
 const fieldData = ref<woHttpData>(emptyHttpWO) //  emptyHttpWO/dummyHttpWO
 
+const { increment, reset } = useCounter()
+
 // Watchers
 watch(
   socketData,
@@ -44,6 +46,8 @@ watch(
         // console.log('Fetch Completado?')
         fieldData.value = await fetchData().then(res => res.data)
         // console.log(fieldData.value)
+        if (newVal >= 9) increment()
+        if (fieldData.value.qty == 0) reset()
       }
       catch (error) {
         console.error('Error en Fetch desde Watcher', error)

@@ -2,7 +2,7 @@
 export interface Props {
   keyItem: string
   field: string
-  content: string
+  content?: string
   highlight?: boolean
 }
 
@@ -33,6 +33,8 @@ const orderChange = (event) => {
 const onEnter = () => {
   alert('User cleared the input')
 }
+
+const { counter } = useCounter()
 </script>
 
 <template>
@@ -41,7 +43,7 @@ const onEnter = () => {
       <v-card>
         <!-- </v-card>class="mx-0 mb-6"> -->
         <v-row class="py-2 px-2" align="center">
-          <v-col cols="5" class="px-2 py-2 text-right text-h6 font-weight-bold">
+          <v-col cols="7" class="px-2 py-2 text-right text-h6 font-weight-bold">
             {{ props.field }}:
           </v-col>
           <!-- <v-col cols="7" align-self="center" class="px-1 py-3 text-left text-h6" v-if="props.keyItem == 'workOrder'">
@@ -49,10 +51,9 @@ const onEnter = () => {
               @change="orderChange" @focus="$event.target.select()">
             </v-text-field>
           </v-col> -->
-          <v-col cols="7" align-self="center" class="px-1 py-3 text-left text-h6">
-            <span class="px-1 py-1"
-              :class="`${props.keyItem == 'qty' && 'text-qty'} ${!props.highlight ? 'text-red-darken-4' : 'bg-red-accent-3'}`">
-              {{ props.content }}
+          <v-col cols="5" align-self="center" class="px-1 py-3 text-left text-h6">
+            <span class="px-1 py-1 text-qty" :class="!props.highlight ? 'text-blue-darken-4' : 'bg-green-accent-3'">
+              {{ counter }}
             </span>
           </v-col>
           <!-- <v-col class="px-1" align="center" v-if="props.keyItem == 'image'">

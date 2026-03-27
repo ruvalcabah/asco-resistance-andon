@@ -51,6 +51,8 @@ const resistanceNotPass = computed<string>(() => { //: stepDisplay[]
       <div class="fill-height">
         <v-row align="center" class="justify-center" no-gutters>
           <v-col cols="5" class="px-2" align="center">
+            <RowCardAcc keyItem="orderQty" field="Order Accumulation"
+              :highlight="(props.currentStep >= 9 && props.currentStep <= 10) ? true : false" />
             <!-- <v-img height="460" max-width="350" contain src="/svg/ilu-pack-a-shipment_1.svg" /> -->
             <v-card class="bg-grey-lighten-4" variant="text">
               <v-card-text class="text-red-darken-4 text-left px-6 py-8">

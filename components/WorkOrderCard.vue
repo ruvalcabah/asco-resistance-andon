@@ -18,16 +18,31 @@ const props = withDefaults(defineProps<Props>(), {
   currentStep: 0
 })
 
+const resitancePass = computed<boolean>(() => {
+  return (props.currentStep == 9) // && props.currentStep <= 10)
+})
+
 const orderUpdate = (eventPayload) => {
   // props.data.workOrder = eventPayload.workOrder
   const res = fetchPost({ payload: eventPayload.workOrder })
 }
+
+const { increment } = useCounter()
+
+// Watchers
+// watch(
+//   resitancePass,
+//   () => {
+//     if (resitancePass) increment()
+//   },
+//   { immediate: true }
+// )
 </script>
 
 <template>
-  <v-card class="rounded-sm bg-grey-lighten-4" height="84vh">
+  <v-card class="rounded-sm bg-grey-lighten-4"><!-- height="85vh" -->
     <CardTitle icon="mdi-database-search" title="Order Information" />
-    <v-card-text class="px-8 py-3">
+    <v-card-text class="px-8 pt-3 pb-0">
       <div class="fill-height">
         <RowCardWO keyItem="workOrder" field="Work Order" :content="props.data.workOrder" @orderUpdate="orderUpdate" />
         <RowCard keyItem="itemNumber" field="Item Number" :content="props.data.itemNumber" />
